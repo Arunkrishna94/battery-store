@@ -34,3 +34,35 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+################### DB #####################
+
+Install Database with below creds
+
+DB_name : user_db
+password : root 
+
+schema to create a table 
+CREATE TABLE users (
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,
+    ->     name VARCHAR(255) NOT NULL,
+    ->     email VARCHAR(255) UNIQUE NOT NULL,
+    ->     password VARCHAR(255) NOT NULL,
+    ->     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    -> );
+
+############## Install npm ##################
+
+node -v
+npm -v
+
+npx create-next-app@latest battery-store-frontend
+npm init next-app@latest battery-store-frontend
+cd battery-store-frontend
+npm run dev
+
+npm run build
+npm start
+
+edit the app/pages --> signin and signup page
+app/pages.tsx edit to accompany the above 
